@@ -13,6 +13,13 @@
 		public function view($view, $data) {
 			require_once "Views/" . $view . ".php";
 		}
+
+		public function index($args)
+		{
+			$model = $this->model("data");
+			$model->data = $args;
+			$this->view("home", $model->data);
+		}
 	}
 
 ?>

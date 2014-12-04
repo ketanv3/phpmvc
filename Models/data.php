@@ -1,6 +1,6 @@
 <?php
 	
-	class DataStore {
+	class data {
 		public $data;
 	}
 
