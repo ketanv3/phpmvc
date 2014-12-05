@@ -1,0 +1,54 @@
+body {
+	background-image: url(../images/bg_landing.jpg);
+	background-image: url(../images/bg_landing.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+
+	font-size: 100%;
+
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 10px;
+	font-size: 1rem;
+
+}
+
+.bannerText {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 56px;
+	font-size: 5.6rem;
+	color: lightseagreen;
+	text-shadow: 1px 1px 0px rgba(255,255,255,0.6);
+	text-align: center;
+	margin: 100px 0 60px 0;
+}
+
+.smallBanner {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	font-size: 1.8rem;
+	color: lightseagreen;
+	text-shadow: 1px 1px 0px rgba(255,255,255,0.6);
+	text-align: center;
+	margin: 20px 0 60px 0;
+}
+
+ul.errorMessages {
+	width: 280px;
+	width: 28rem;
+	margin: 100px auto;
+	background-color: rgba(0,0,0,0.1);
+	padding: 10px 20px;
+	color: darkslategrey;
+}
+
+li {
+	padding: 10px 0;
+	margin: 0;
+	list-style-type: none;
+	margin: 0;
+}

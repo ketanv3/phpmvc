@@ -10,7 +10,7 @@
 	// -------------------------------
 
 	// Set the headers
-	setHeader("plain");
+	// setHeader("plain");
 
 	// Dump the Errors
 	// var_dump(Debug::getErrors());
