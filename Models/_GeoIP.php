@@ -31,7 +31,7 @@
 			}
 
 			//Place a request to "http://telize.com" to get the IP data
-			$data = @file_get_contents("http://www.telize.com/geoip/" . $ip);
+			$data = @Cache::request("http://www.telize.com/geoip/" . $ip, (1 * 30 * 24 * 60 * 60));
 
 			//Decode the JSON string into an associative array
 			$data = json_decode($data, true);

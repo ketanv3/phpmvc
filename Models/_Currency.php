@@ -25,7 +25,7 @@
 					}
 
 					//Send a request to "http://freecurrencyconverterapi.com" and get the data
-					$data = file_get_contents("http://www.freecurrencyconverterapi.com/api/v2/convert?q=" . $from . "_" . $to ."&compact=y");
+					$data = Cache::request("http://www.freecurrencyconverterapi.com/api/v2/convert?q=" . $from . "_" . $to ."&compact=y", (30 * 60));
 
 					//Convert the JSON response to an associative array
 					$data = json_decode($data, true);
@@ -51,7 +51,7 @@
 
 		public function listCountries() {
 			// Place a request to "http://www.freecurrencyconverterapi.com/api/v2/countries" and get the JSON data
-			$data = file_get_contents("http://www.freecurrencyconverterapi.com/api/v2/countries");
+			$data = Cache::request("http://www.freecurrencyconverterapi.com/api/v2/countries");
 
 			//Convert this data into an associative array
 			$data = json_decode($data, true);
@@ -61,7 +61,7 @@
 
 		public function listCurrencies() {
 			// Place a request to "http://www.freecurrencyconverterapi.com/api/v2/currencies" and get the JSON data
-			$data = file_get_contents("http://www.freecurrencyconverterapi.com/api/v2/currencies");
+			$data = Cache::request("http://www.freecurrencyconverterapi.com/api/v2/currencies");
 
 			//Convert this data into an associative array
 			$data = json_decode($data, true);
