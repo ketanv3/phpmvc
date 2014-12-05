@@ -10,7 +10,7 @@
 			return new $model;
 		}
 
-		public function view($view, $data) {
+		public function view($view, $data = []) {
 			require_once "Views/" . $view . ".php";
 		}
 
