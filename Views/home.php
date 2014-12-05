@@ -1,8 +1,5 @@
 <?php
-
 	$errors = Debug::getErrors();
-
-
 ?>
 
 <!DOCTYPE html>

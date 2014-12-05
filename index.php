@@ -10,6 +10,7 @@
 	// -------------------------------
 
 	// Set the headers
+	// No need to set the headers from here, let the JSON view do it automatically!
 	// setHeader("plain");
 
 	// Dump the Errors
