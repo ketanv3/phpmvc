@@ -5,6 +5,13 @@
 	*/
 	class Controller
 	{
+
+		protected $responseType;
+
+		public function __construct($responseType) {
+			$this->responseType = $responseType;
+		}
+
 		public function model($model) {
 			require_once "Models/" . $model . ".php";
 			return new $model;

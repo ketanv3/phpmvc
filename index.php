@@ -4,8 +4,11 @@
 	require_once "autoload.php";
 
 	$application = new Application;
+	
 	// Application can be called using the execute() function, or call by the URL
-	$application->execute('currency/convert', ['USD', 'INR', 1]);
+	// $application->execute('currency/convert', ['USD', 'INR', 1]);
+	// setHeader("plain");
+	// var_dump(ResponseHandler::$response);
 
 	// -------------------------------
 

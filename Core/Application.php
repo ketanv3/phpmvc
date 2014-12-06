@@ -12,7 +12,7 @@
 			}
 		}
 
-		public function execute($path, $args = []) {
+		public function execute($path, $args = [], $responseType = 'response') {
 			$path = explode('/', $path);
 			$this->controller = $path[0];
 			$this->method = $path[1];
@@ -30,7 +30,7 @@
 			}
 			//Create a new instance of controller
 			require_once "Controllers/" . $this->controller . ".php";
-			$this->controller = new $this->controller;
+			$this->controller = new $this->controller($responseType);
 
 			//Check if the method exists, else use the default values
 			try {
@@ -45,7 +45,6 @@
 			}
 			//Call that method
 			//call_user_func_array([$this->controller, $this->method], $args);
-			
 			$this->controller->{$this->method}($args);
 		}
 
@@ -92,7 +91,7 @@
 			}
 
 			//Call the execute function with the above values
-			$this->execute($this->controller . "/" . $this->method, $this->args);
+			$this->execute($this->controller . "/" . $this->method, $this->args, 'json');
 		}
 
 	}

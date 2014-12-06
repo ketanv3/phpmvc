@@ -5,7 +5,7 @@
 		public function ipdata($arg) {
 			$model = $this->model('_GeoIP');
 			$data = $model->ipdata($arg);
-			$this->view('json', $data);
+			$this->view($this->responseType, $data);
 		}
 
 	}
