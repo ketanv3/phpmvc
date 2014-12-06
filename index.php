@@ -5,7 +5,7 @@
 
 	$application = new Application;
 	// Application can be called using the execute() function, or call by the URL
-	// $application->execute('ketan/verma', ['This', 'is', 'cool!']);
+	$application->execute('currency/convert', ['USD', 'INR', 1]);
 
 	// -------------------------------
 

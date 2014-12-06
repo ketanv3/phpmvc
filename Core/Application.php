@@ -46,14 +46,7 @@
 			//Call that method
 			//call_user_func_array([$this->controller, $this->method], $args);
 			
-			//Try and see if the method is public
-			try {
-				//How to see if the method is visible or not?
-				$this->controller->{$this->method}($args);
-			} catch (Exception $e) {
-				Debug::newError($e);
-			}
-
+			$this->controller->{$this->method}($args);
 		}
 
 		public function parseURL() {
