@@ -46,6 +46,9 @@
 			//Call that method
 			//call_user_func_array([$this->controller, $this->method], $args);
 			$this->controller->{$this->method}($args);
+
+			//Return data from the ResponseHandler Class
+			return ResponseHandler::$response;
 		}
 
 		public function parseURL() {

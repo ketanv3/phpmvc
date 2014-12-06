@@ -10,6 +10,11 @@
 	// setHeader("plain");
 	// var_dump(ResponseHandler::$response);
 
+	// New Update!
+	// No need to dump data from ResponseHandler Class, let it be done within the execute function.
+	// Why didn't I think of this earlier?
+	// var_dump($application->execute('currency/convert', ['USD', 'INR', 1]));
+
 	// -------------------------------
 
 	// Set the headers
